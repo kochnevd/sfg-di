@@ -1,6 +1,6 @@
 package kda.learn.spring.sfgdi.services;
 
-public interface GreetingServce {
+public interface GreetingService {
 
     String sayGreeting();
 }

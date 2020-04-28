@@ -1,17 +1,17 @@
 package kda.learn.spring.sfgdi.controllers;
 
-import kda.learn.spring.sfgdi.services.GreetingServce;
+import kda.learn.spring.sfgdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class ConstructorInjectedController {
-    private final GreetingServce greetingServce;
+    private final GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingServce greetingServce) {
-        this.greetingServce = greetingServce;
+    public ConstructorInjectedController(GreetingService greetingService) {
+        this.greetingService = greetingService;
     }
 
     public String getGreeting() {
-        return greetingServce.sayGreeting();
+        return greetingService.sayGreeting();
     }
 }

@@ -1,6 +1,6 @@
 package kda.learn.spring.sfgdi.controllers;
 
-import kda.learn.spring.sfgdi.services.GreetingServce;
+import kda.learn.spring.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingServce greetingServce;
+    public GreetingService greetingService;
 
     public String getGreeting() {
-        return greetingServce.sayGreeting();
+        return greetingService.sayGreeting();
     }
 }
