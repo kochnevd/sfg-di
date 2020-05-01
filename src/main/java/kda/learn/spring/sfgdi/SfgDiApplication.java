@@ -1,9 +1,6 @@
 package kda.learn.spring.sfgdi;
 
-import kda.learn.spring.sfgdi.controllers.ConstructorInjectedController;
-import kda.learn.spring.sfgdi.controllers.MyController;
-import kda.learn.spring.sfgdi.controllers.PropertyInjectedController;
-import kda.learn.spring.sfgdi.controllers.SetterInjectedController;
+import kda.learn.spring.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +10,9 @@ public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nController i18nController = (I18nController)ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController ctrlr = (MyController) ctx.getBean("myController");
 
